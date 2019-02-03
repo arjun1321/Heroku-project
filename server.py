@@ -35,7 +35,11 @@ if __name__ == "__main__":
             'tools.response_headers.on': True,
             'tools.response_headers.headers': [('Content-Type', 'text/plain')],
         },
-        '/static': {
+        '/css': {
+            'tools.staticdir.on': True,
+            'tools.staticdir.dir': 'public'
+        },
+        '/js': {
             'tools.staticdir.on': True,
             'tools.staticdir.dir': 'public'
         }
