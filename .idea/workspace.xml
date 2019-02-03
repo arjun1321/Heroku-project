@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bde4283b-9baf-48a2-b778-89dc97c48cd0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/css/materialize.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/materialize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/materialize.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/materialize.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/materialize.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/materialize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/materialize.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/materialize.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+            <state relative-caret-position="381">
+              <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -107,6 +114,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Arjun Kumar\Desktop\Zerodha test\assets" />
       <recent name="C:\Users\Arjun Kumar\Desktop\Zerodha test" />
       <recent name="C:\Users\Arjun Kumar\Desktop\Zerodha test\public" />
       <recent name="C:\Users\Arjun Kumar\Desktop\Zerodha test\" />
@@ -190,12 +198,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1549185863906</updated>
-      <workItem from="1549185865224" duration="6574000" />
+      <workItem from="1549185865224" duration="6950000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6574000" />
+    <option name="totallyTimeSpent" value="6950000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -268,8 +276,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+        <state relative-caret-position="381">
+          <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

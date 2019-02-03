@@ -35,14 +35,11 @@ if __name__ == "__main__":
             'tools.response_headers.on': True,
             'tools.response_headers.headers': [('Content-Type', 'text/plain')],
         },
-        '/css': {
+        '/assets': {
             'tools.staticdir.on': True,
-            'tools.staticdir.dir': 'public'
+            'tools.staticdir.dir': 'assets'
         },
-        '/js': {
-            'tools.staticdir.on': True,
-            'tools.staticdir.dir': 'public'
-        }
+
     }
     webapp = StockList()
     # webapp.stocks = StockListService()
