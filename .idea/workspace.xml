@@ -143,7 +143,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.server">
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Zerodha test/public/index.html" useBuiltInWebServerPort="true">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Zerodha test/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="helloworld" type="PythonConfigurationType" factoryName="Python" temporary="true">
