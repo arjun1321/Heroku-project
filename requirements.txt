@@ -1,2 +1,5 @@
+beautifulsoup4
+redis
+pandas
 cherrypy==3.8.0
 Jinja2==2.7.3

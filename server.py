@@ -1,17 +1,20 @@
 import cherrypy
 import os
-import json
+from Utility import get_top_10_stocks
+from jinja2 import Environment, FileSystemLoader
 
 
+CUR_DIR = os.path.dirname(os.path.abspath(__file__))
 
+env = Environment(loader=FileSystemLoader(CUR_DIR), trim_blocks=True)
 
-
-
-class StockList(object):
+class HelloWorld(object):
     @cherrypy.expose
     def index(self):
-        return open("index.html")
-
+        template = env.get_template('index.html')
+        data = get_top_10_stocks()
+        context = {'stocks': data}
+        return  template.render(**context)
 
 
 if __name__ == "__main__":
@@ -25,23 +28,11 @@ if __name__ == "__main__":
             'tools.sessions.on': True,
             'tools.staticdir.root': os.path.abspath(os.getcwd())
         },
-        '/stocks': {
-            'request.dispatch': cherrypy.dispatch.MethodDispatcher(),
-            'tools.response_headers.on': True,
-            'tools.response_headers.headers': [('Content-Type', 'text/plain')],
-        },
-        '/stocks/search': {
-            'request.dispatch': cherrypy.dispatch.MethodDispatcher(),
-            'tools.response_headers.on': True,
-            'tools.response_headers.headers': [('Content-Type', 'text/plain')],
-        },
         '/assets': {
             'tools.staticdir.on': True,
             'tools.staticdir.dir': 'assets'
         },
 
     }
-    webapp = StockList()
-    # webapp.stocks = StockListService()
-    # webapp.stocks.search = StockSearchService()
+    webapp = HelloWorld()
     cherrypy.quickstart(webapp, '/', conf)
