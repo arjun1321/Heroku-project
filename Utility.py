@@ -30,7 +30,7 @@ def redis_connection():
 
     try:
         # making  connection to redis database
-        r = redis.StrictRedis(os.environ.get("REDIS_URL", 'None'))
+        r = redis.StrictRedis(os.environ.get("REDIS_URL"))
 
     except Exception as e:
         print(e)
