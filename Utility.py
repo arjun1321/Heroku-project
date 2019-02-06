@@ -45,12 +45,13 @@ def redis_connection():
 def store_data_to_redis():
     data = pd.read_csv(download_zip_and_extract() + '.CSV')
     r = redis_connection()
+    r.flushall()
 
     for index, row in data.iterrows():
         mapping = {'code': row['SC_CODE'], 'name': row['SC_NAME'].strip(), 'open': row['OPEN'], 'high': row['HIGH'],
                    'low': row['LOW'], 'close': row['CLOSE']}
         r.hmset('stock-' + str(index + 1), mapping)
-        r.sadd(row['SC_NAME'].strip(), index + 1)
+        r.set(row['SC_NAME'].strip(), index + 1)
 
 
 
@@ -68,3 +69,14 @@ def get_top_10_stocks():
 
     return top_10_stocks
 
+
+# Search keys
+def search_stocks(name):
+    stocks = []
+    r = redis_connection()
+    stock_keys = r.keys('*' + name + '*')
+    for stock_name in stock_keys:
+        value = r.get(stock_name)
+        dict = r.hgetall('stock-' + value)
+        stocks.append(dict)
+    return stocks

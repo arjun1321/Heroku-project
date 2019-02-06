@@ -28,38 +28,13 @@
 
 			<h5>Search Stock By Name</h5>
       <div class="input-field">
-          <input placeholder="Name of stock" id="stock_name" type="text" class="validate">
-          <button class="btn waves-effect waves-light" type="submit" name="action">Search
-		  </button>
+
+	  <input style="padding: 10px" placeholder="Name of stock" id="stock_name" type="search" class="validate" onkeyup="get_data_ajax()" >
+	 <!-- <button class="btn waves-effect waves-light" onclick="get_data_ajax()">Search</button> -->
+
       </div>
 
-      	<table class="centered responsive-table">
-	        <thead>
-	          <tr>
-	              <th>Name</th>
-	              <th>Item Name</th>
-	              <th>Item Price</th>
-	              <th>Name</th>
-	              <th>Item Name</th>
-	              <th>Item Price</th>
-	          </tr>
-	        </thead>
-
-	        <tbody>
-	          <tr>
-	            <td>Alvin</td>
-	            <td>Eclair</td>
-	            <td>$0.87</td>
-	            <td>Alvin</td>
-	            <td>Eclair</td>
-	            <td>$0.87</td>
-	          </tr>
-
-	        </tbody>
-	      </table>
-
-			<br>
-          <span class="card-title"><b>BhavCopy Top 10 Stocks</b></span><br>
+          <span class="card-title"><b>List of stocks</b></span><br>
           <table class="centered responsive-table">
 	        <thead>
 	          <tr>
@@ -72,7 +47,7 @@
 	          </tr>
 	        </thead>
 
-	        <tbody>
+	        <tbody id="result">
 
 			{% for stock in stocks %}
 	          <tr>
@@ -95,6 +70,25 @@
 
   </div>
 
+  <script>
+
+	  function get_data_ajax() {
+	  	debugger;
+		  jQuery.ajax({
+				type	: "POST",
+				url		: "/search",
+				data    : {"name":$('#stock_name').val()},
+				success	: function(response){
+					debugger;
+					$('#result').html('');
+					$('#result').html(response);
+			    }
+			});
+	  }
+
+
+
+  </script>
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

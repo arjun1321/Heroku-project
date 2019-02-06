@@ -1,0 +1,10 @@
+{% for stock in stocks %}
+  <tr>
+    <td>{{stock['code']}}</td>
+    <td>{{stock['name']}}</td>
+    <td>{{stock['open']}}</td>
+    <td>{{stock['high']}}</td>
+    <td>{{stock['low']}}</td>
+    <td>{{stock['close']}}</td>
+  </tr>
+{% endfor %}
