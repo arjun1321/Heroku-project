@@ -3,7 +3,6 @@ import requests
 import zipfile, io
 import pandas as pd
 import redis
-import os
 
 
 # Parsing the exact Link from the BSE portal
@@ -27,9 +26,9 @@ def download_zip_and_extract():
 
 # Redis database connection
 def redis_connection():
-    redis_host = "ec2-23-22-9-220.compute-1.amazonaws.com"
+    redis_host = "host"
     redis_port = 7949
-    redis_password = "p2a3244f8451b8e4c92461fdbc825853de3355dfd0ebdd643a91f443bea0a7fe7"
+    redis_password = "password"
 
     try:
         # making  connection to redis database
