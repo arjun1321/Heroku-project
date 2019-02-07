@@ -11,7 +11,7 @@ env = Environment(loader=FileSystemLoader(CUR_DIR), trim_blocks=True)
 class HelloWorld(object):
     @cherrypy.expose
     def index(self):
-        store_data_to_redis()
+        # store_data_to_redis()
         template = env.get_template('index.html')
         data = get_top_10_stocks()
         context = {'stocks': data}
