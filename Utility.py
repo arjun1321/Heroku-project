@@ -33,8 +33,8 @@ def redis_connection():
 
     try:
         # making  connection to redis database
-        r = redis.StrictRedis(host=redis_host, port=redis_port, password=redis_password, decode_responses=True)
-        # r = redis.Redis.from_url(os.environ.get("REDIS_URL"))
+        # r = redis.StrictRedis(host=redis_host, port=redis_port, password=redis_password, decode_responses=True)
+        r = redis.Redis.from_url(os.environ.get("REDIS_URL"))
 
     except Exception as e:
         print(e)
