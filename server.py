@@ -1,6 +1,6 @@
 import cherrypy
 import os
-from Utility import get_top_10_stocks, search_stocks
+from Utility import get_top_10_stocks, search_stocks, store_data_to_redis
 from jinja2 import Environment, FileSystemLoader
 
 
@@ -11,6 +11,7 @@ env = Environment(loader=FileSystemLoader(CUR_DIR), trim_blocks=True)
 class HelloWorld(object):
     @cherrypy.expose
     def index(self):
+        store_data_to_redis()
         template = env.get_template('index.html')
         data = get_top_10_stocks()
         context = {'stocks': data}

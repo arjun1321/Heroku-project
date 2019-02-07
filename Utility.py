@@ -33,8 +33,8 @@ def redis_connection():
 
     try:
         # making  connection to redis database
-        r = redis.StrictRedis(host=redis_host, port=redis_port, password=redis_password, decode_responses=True)
-        # r = redis.from_url(os.environ.get("REDIS_URL"))
+        # r = redis.StrictRedis(host=redis_host, port=redis_port, password=redis_password, decode_responses=True)
+        r = redis.Redis.from_url(os.environ.get("REDIS_URL"))
 
     except Exception as e:
         print(e)
@@ -81,3 +81,4 @@ def search_stocks(name):
         dict = r.hgetall('stock-' + value)
         stocks.append(dict)
     return stocks
+
