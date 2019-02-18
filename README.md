@@ -10,3 +10,9 @@ https://www.bseindia.com/markets/MarketInfo/BhavCopy.aspx
 - Search stocks by their name field
 - Click <a href="https://myapparjun1321.herokuapp.com/"> Here </a> for demo
 
+
+<h6> Not complete yet Following works need to be done </h6>
+- Need to optimize search functionality
+- Need to handle errors- zip, redis, http get
+- Need to simplify redis implementation
+
