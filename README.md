@@ -11,7 +11,8 @@ https://www.bseindia.com/markets/MarketInfo/BhavCopy.aspx
 - Click <a href="https://myapparjun1321.herokuapp.com/"> Here </a> for demo
 
 
-<h6> Not complete yet Following works need to be done </h6>
+Not complete yet following works need to be done
+
 - Need to optimize search functionality
 - Need to handle errors- zip, redis, http get
 - Need to simplify redis implementation
